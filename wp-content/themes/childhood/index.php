@@ -260,9 +260,10 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="contacts__descr underlined">
-                            Мы находимся в Москве, метро "Парк победы", в деловом центре "Парк победы", второй этаж
+                            We are located in Punta del Este:
                             <br> <br>
-                            по адресу ул. Василисы Кожиной, 1
+                            <!-- по адресу ул. Василисы Кожиной, 1 -->
+                            <?php the_field('address'); ?>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -272,11 +273,11 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="title contacts__minititle">Свяжитесь с нами</div>
+                        <div class="title contacts__minititle">Contact us</div>
                         <div class="contacts__info">
                             <div class="contacts__phones">
                                 <div class="contacts__phoneblock">
-                                    Телефон №1
+                                    Phone №1
                                     <div class="contacts__phonewrap">
                                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.4887 0.000305176H5.51165C4.74276 0.000305176 4.1167 0.626369 4.1167 1.39525V17.6055C4.1167 18.3747 4.74276 19.0007 5.51165 19.0007H13.4883C14.2575 19.0007 14.8836 18.3747 14.8836 17.6058V1.39525C14.8836 0.626369 14.2575 0.000305176 13.4887 0.000305176ZM4.75005 2.5337H14.2503V14.5673H4.75005V2.5337ZM5.51165 0.633653H13.4883C13.9086 0.633653 14.2503 0.975344 14.2503 1.39525V1.90035H4.75005V1.39525C4.75005 0.975344 5.09174 0.633653 5.51165 0.633653ZM13.4887 18.3674H5.51165C5.09174 18.3674 4.75005 18.0257 4.75005 17.6058V15.2006H14.2503V17.6058C14.2503 18.0257 13.9086 18.3674 13.4887 18.3674Z" fill="url(#paint0_linear)"/>
@@ -322,11 +323,11 @@
                                             </linearGradient>
                                             </defs>
                                         </svg>
-                                        <a href="tel:+797867834347">+797867834347</a>
+                                        <a href="tel:+797867834347"><?php the_field('phone1'); ?></a>
                                     </div>
                                 </div>
                                 <div class="contacts__phoneblock">
-                                    Телефон №2
+                                    Phone №2
                                     <div class="contacts__phonewrap">
                                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.4887 0.000305176H5.51165C4.74276 0.000305176 4.1167 0.626369 4.1167 1.39525V17.6055C4.1167 18.3747 4.74276 19.0007 5.51165 19.0007H13.4883C14.2575 19.0007 14.8836 18.3747 14.8836 17.6058V1.39525C14.8836 0.626369 14.2575 0.000305176 13.4887 0.000305176ZM4.75005 2.5337H14.2503V14.5673H4.75005V2.5337ZM5.51165 0.633653H13.4883C13.9086 0.633653 14.2503 0.975344 14.2503 1.39525V1.90035H4.75005V1.39525C4.75005 0.975344 5.09174 0.633653 5.51165 0.633653ZM13.4887 18.3674H5.51165C5.09174 18.3674 4.75005 18.0257 4.75005 17.6058V15.2006H14.2503V17.6058C14.2503 18.0257 13.9086 18.3674 13.4887 18.3674Z" fill="url(#paint0_linear)"/>
@@ -372,13 +373,13 @@
                                             </linearGradient>
                                             </defs>
                                         </svg>
-                                        <a href="tel:+797867834358">+797867834358</a>
+                                        <a href="tel:+797867834358"><?php the_field('phone2'); ?></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="contacts__mail">
-                                Или напишите нам на почту
-                                <a href="mailto:mirdetstva@gmail.com">mirdetstva@gmail.com</a>
+                                Or email us
+                                <a href="mailto:mirdetstva@gmail.com"><?php the_field('email'); ?></a>
                             </div>
                         </div>
                     </div>

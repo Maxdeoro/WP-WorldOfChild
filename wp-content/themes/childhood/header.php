@@ -30,19 +30,20 @@
                         <div class="header__contacts">
                             <div class="header__contacts-item">
                                 <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/svg/email.svg" alt="почта" class="header__contacts-logo">
-                                <a href="mailto:mirdetstva@gmail.com" class="header__contacts-mail">mirdetstva@gmail.com</a>
+                                <a href="mailto:mirdetstva@gmail.com" class="header__contacts-mail">
+                                    <?php the_field('email', 11); ?>
+                                </a>
                             </div>
                             <div class="header__contacts-item">
                                 <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/svg/phone.svg" alt="телефон" class="header__contacts-logo">
                                 <div class="header__contacts-tel">
-                                    <a href="tel:+797867834347">+797867834347</a>
-                                    <a href="tel:+797867834358">+797867834358</a>
+                                    <a href="tel:+797867834347"><?php the_field('phone1', 11); ?></a>
+                                    <a href="tel:+797867834358"><?php the_field('phone2', 11); ?></a>
                                 </div>
                             </div>
                             <div class="header__contacts-item">
                                 <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/svg/pointer.svg" alt="указатель" class="header__contacts-logo">
-                                <address>ул. Василисы Кожиной, 1<br>
-                                    Москва, Россия, 121096</address>
+                                <address><?php the_field('address', 11) ?></address>
                             </div>
                         </div>
                     </div>
