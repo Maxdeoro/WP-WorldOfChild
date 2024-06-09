@@ -74,27 +74,31 @@
                 <div class="row">
                     <div class="col-md-10 offset-md-1 col-lg-5 offset-lg-1">
                         <div class="about__img">
-                            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/about.jpg" alt="про компанию">
+                            <?php 
+                                $image = get_field('about_image');
+                                if( !empty( $image ) ): ?>
+                                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <?php endif;
+                                // print_r($image);
+                             ?>
                         </div>
                     </div>
                     <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-6 col-xl-5 offset-xl-1">
-                        <h1 class="title underlined">Про компанию</h1>
+                        <h1 class="title underlined"><?php the_field('about_title'); ?></h1>
                         <div class="about__text">
-                            Наша компания уже больше десяти лет дарит позитивные эмоции детям и их родителям. Мы воплощаем все детские мечты и помогаем родителям дарить счастливое детство!
-                            <br> <br>
-                            Но и взрослые иногда так нуждаются в детских эмоциях! Мы можем и это, ведь так приятно почувствовать заботу даже когда тебе за... :)
+                            <?php the_field('about_descr'); ?>
                         </div>
-                        <a href="#" class="button">Узнать больше</a>
+                        <a href="#" class="button">Learn more</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="specialists" id="specialists">
             <div class="container">
-                <div class="title">Наша команда</div>
+                <div class="title"><?php the_field('team_title'); ?></div>
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
-                        <img class="specialists__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/team.jpg" alt="наша команда">
+                        <img class="specialists__img" src="<?php the_field('team_image'); ?>" alt='our_team'>
                     </div>
                 </div>
             </div>
@@ -190,7 +194,7 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="toys__alert">
-                            <span>Не нашли то, что искали?</span> Свяжитесь с нами - и мы с радостью создадим любую игрушку по вашему желанию. Вы можете выбрать все: размер, материал, формы...!
+                            <span><?php the_field('bold_span'); ?></span> <?php the_field('extra_text'); ?>
                         </div>
                     </div>
                 </div>
@@ -199,35 +203,31 @@
 
         <div class="aboutus" id="aboutus">
             <div class="container">
-                <h1 class="title">Наша история</h1>
+                <h1 class="title">Our history</h1>
                 <div class="row">
-                    <div class="col-lg-6">
+                <div class="col-lg-6">
                         <div class="subtitle">
-                            Все начиналось с желания
+                            <?php the_field('history_1_title'); ?>
                         </div>
                         <div class="aboutus__text">
-                            Желания сделать как можно больше детей счастливыми. Именно с этой идеи все и зарождалось.
-                            <br><br>
-                            Первые игрушки, сделанные вручную были классическими плюшевыми медведями, которые разошлись настолько быстро, что нас завалили заказами на несколько месяцев вперед. Именно в то время мы поняли, что идем правильным путем, вкладывая все силы и эмоции в наши игрушки.
+                            <?php the_field('history_1_descr'); ?>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_1.jpg" alt="мир детства">
+                        <img class="aboutus__img" src="<?php the_field('history_1_image'); ?>" alt="мир детства"> 
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-6">
-                        <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_2.jpg" alt="мир детства">
+                        <img class="aboutus__img" src="<?php the_field('history_2_image'); ?>" alt="мир детства">
                     </div>
                     <div class="col-lg-6">
                         <div class="subtitle">
-                            Главное - качество
+                            <?php the_field('history_2_title'); ?>
                         </div>
                         <div class="aboutus__text">
-                            Мы делали их вручную, из лучших материалов и не жалея времени. Но мы росли и наш ассортимент расширился и фабричными изделиями.
-                            <br><br>
-                            Выбирая нас, вы можете быть уверены, что мы всегда следим за качеством закупок и никогда не предоставим вам опасный или некачественный товар.
+                            <?php the_field('history_2_descr'); ?>
                         </div>
                     </div>
                 </div>
@@ -235,16 +235,14 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="subtitle">
-                            Современные технологии
+                            <?php the_field('history_3_title'); ?>
                         </div>
                         <div class="aboutus__text">
-                            И даже спустя столько лет мы продолжаем создавать игрушки вручную. Как самые простые, так и те, что идут в ногу со временем. Добавляя электроники и оживляя лучших друзей ребятишек, мы всегда следим за качеством и безопасностью. Каждая отдельная игрушка проходит индивидуальный контроль по всем необходимым стандартам.
-                            <br><br>
-                            Ведь счастливое лицо ребенка - это лучшая награда для нас!
+                            <?php the_field('history_3_descr'); ?>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_3.jpg" alt="мир детства">
+                        <img class="aboutus__img" src="<?php the_field('history_3_image'); ?>" alt="мир детства">
                     </div>
                 </div>
             </div>
@@ -256,9 +254,9 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="contacts__descr underlined">
-                            Мы находимся в Москве, метро "Парк победы", в деловом центре "Парк победы", второй этаж
+                            We are located in Punta del Este:
                             <br> <br>
-                            по адресу ул. Василисы Кожиной, 1
+                            <?php the_field('address'); ?>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -268,11 +266,11 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="title contacts__minititle">Свяжитесь с нами</div>
+                        <div class="title contacts__minititle">Contact us</div>
                         <div class="contacts__info">
                             <div class="contacts__phones">
                                 <div class="contacts__phoneblock">
-                                    Телефон №1
+                                    Phone №1
                                     <div class="contacts__phonewrap">
                                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.4887 0.000305176H5.51165C4.74276 0.000305176 4.1167 0.626369 4.1167 1.39525V17.6055C4.1167 18.3747 4.74276 19.0007 5.51165 19.0007H13.4883C14.2575 19.0007 14.8836 18.3747 14.8836 17.6058V1.39525C14.8836 0.626369 14.2575 0.000305176 13.4887 0.000305176ZM4.75005 2.5337H14.2503V14.5673H4.75005V2.5337ZM5.51165 0.633653H13.4883C13.9086 0.633653 14.2503 0.975344 14.2503 1.39525V1.90035H4.75005V1.39525C4.75005 0.975344 5.09174 0.633653 5.51165 0.633653ZM13.4887 18.3674H5.51165C5.09174 18.3674 4.75005 18.0257 4.75005 17.6058V15.2006H14.2503V17.6058C14.2503 18.0257 13.9086 18.3674 13.4887 18.3674Z" fill="url(#paint0_linear)"/>
@@ -318,11 +316,11 @@
                                             </linearGradient>
                                             </defs>
                                         </svg>
-                                        <a href="tel:+797867834347">+797867834347</a>
+                                        <a href="tel:+797867834347"><?php the_field('phone1'); ?></a>
                                     </div>
                                 </div>
                                 <div class="contacts__phoneblock">
-                                    Телефон №2
+                                    Phone №2
                                     <div class="contacts__phonewrap">
                                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.4887 0.000305176H5.51165C4.74276 0.000305176 4.1167 0.626369 4.1167 1.39525V17.6055C4.1167 18.3747 4.74276 19.0007 5.51165 19.0007H13.4883C14.2575 19.0007 14.8836 18.3747 14.8836 17.6058V1.39525C14.8836 0.626369 14.2575 0.000305176 13.4887 0.000305176ZM4.75005 2.5337H14.2503V14.5673H4.75005V2.5337ZM5.51165 0.633653H13.4883C13.9086 0.633653 14.2503 0.975344 14.2503 1.39525V1.90035H4.75005V1.39525C4.75005 0.975344 5.09174 0.633653 5.51165 0.633653ZM13.4887 18.3674H5.51165C5.09174 18.3674 4.75005 18.0257 4.75005 17.6058V15.2006H14.2503V17.6058C14.2503 18.0257 13.9086 18.3674 13.4887 18.3674Z" fill="url(#paint0_linear)"/>
@@ -368,13 +366,13 @@
                                             </linearGradient>
                                             </defs>
                                         </svg>
-                                        <a href="tel:+797867834358">+797867834358</a>
+                                        <a href="tel:+797867834358"><?php the_field('phone2'); ?></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="contacts__mail">
-                                Или напишите нам на почту
-                                <a href="mailto:mirdetstva@gmail.com">mirdetstva@gmail.com</a>
+                                Or email us
+                                <a href="mailto:mirdetstva@gmail.com"><?php the_field('email'); ?></a>
                             </div>
                         </div>
                     </div>
