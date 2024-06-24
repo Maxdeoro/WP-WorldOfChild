@@ -237,7 +237,7 @@
         </div>
 
         <div class="contacts" id="contacts">
-            <h1 class="title">Где нас найти</h1>
+            <h1 class="title">Where to find us</h1>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -248,7 +248,11 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div id="map" class="contacts__map">
+                        <!-- <div id="map" class="contacts__map"></div> -->
+                        <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=montevideo&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
