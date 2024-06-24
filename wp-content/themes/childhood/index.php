@@ -249,10 +249,13 @@
                     </div>
                     <div class="col-lg-6">
                         <!-- <div id="map" class="contacts__map"></div> -->
-                        <div class="mapouter">
+                        <!-- <div class="mapouter">
                             <div class="gmap_canvas">
                                 <iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=montevideo&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                             </div>
+                        </div> -->
+                        <div class="contacts__map">
+                                <?php echo do_shortcode('[mapengine id="131"]'); ?>
                         </div>
                     </div>
                 </div>
