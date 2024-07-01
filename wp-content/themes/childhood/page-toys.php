@@ -37,7 +37,7 @@
                                 <div class="toys__item-descr">
                                     <?php the_field('toys_descr') ?>                           
                                 </div>
-                                <div class="minibutton toys__trigger">Read more</div>
+                                <a href="<?php echo get_permalink(); ?>" class="minibutton toys__trigger">Read more</a>
                             </div>
                         </div>
                         <!-- <?php the_post_thumbnail(); ?> -->
@@ -76,7 +76,7 @@
                                 <div class="toys__item-descr">
                                     <?php the_field('toys_descr') ?>                           
                                 </div>
-                                <div class="minibutton toys__trigger">Read more</div>
+                                <a href="<?php echo get_permalink(); ?>" class="minibutton toys__trigger">Read more</a>
                             </div>
                         </div>
                         <!-- <?php the_post_thumbnail(); ?> -->
